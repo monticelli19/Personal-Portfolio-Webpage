@@ -1,0 +1,321 @@
+/*Variables*/
+
+:root {
+  --color-white: #f3f3f3;
+  --color-blue: #007FFF;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-pink: #FFC0CB;
+  --color-lightpink: #FFCDD2;
+  --color-darkerpink: #F06292;
+  --color-aqua: #66ffff;
+  --color-darkaqua: #00cccc;
+  --color-green: #37af65;
+  --color-apple: #65b237;
+  --color-darkgray: #262626;
+  --color-gray: #EEEEEE;
+  --color-grayer: #CCCCCC;
+}
+
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base styles */
+
+body{
+  font-family: sans-serif;
+  background: var(--color-darkblue);
+  color: var(--color-white);
+}
+
+h1,
+h2 {
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.nav-float-right{
+  float: right;
+}
+
+.nav-bar li {
+  float: left;
+}
+
+.nav-bar a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+li a, .nav-dropbtn {
+  display: inline-block;
+  color: var(--color-white);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li a:hover, .nav-dropdown:hover .nav-dropbtn {
+  background-color: var(--color-green);
+}
+
+li.nav-dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Welcome section */
+
+#welcome-section {
+  widht: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-section > p, h1 {
+
+}
+
+/* About section */
+
+#about-section {
+  widht: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section > p, h1 {
+
+}
+
+/* Projects section */
+
+.projects-section {
+  widht: 100%;
+  height: 100vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+}
+
+.project-section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: inherit;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  padding: 5px;
+  object-fit: cover;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.7rem;
+  text-align: center;
+  padding-top: 2rem;
+  transition: text-shadow 0.3s ease-out;
+}
+
+.project:hover .project-title .project-image{
+  box-shadow: 0 0 2px 1px var(--color-green);
+  text-shadow: 0 0 3px var(--color-green), 0 0 5px var(--color-green);
+}
+
+// .project-title:hover {
+//   text-shadow: 0 0 3px var(--color-green), 0 0 5px var(--color-green);
+// }
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  font-size: 1.7rem;
+}
+
+.btn-show-all {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  background-color: inherit;
+  transition: background 0.3s ease-out;
+
+}
+
+.btn:hover, .btn-show-all:hover {
+  background: var(--color-green);
+}
+
+/* Contact section */
+
+.contact-section {
+  width: 100%;
+  height: 100vh;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details > img {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+/*Media queries*/
+
+@media (max-width: 30.625em) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* This HTML used some references from:
+// freeCodeCamp.org, Product Landing Page example: https://codepen.io/freeCodeCamp/pen/zNBOYG
+// And https://www.w3schools.com/css/
+
+*/
